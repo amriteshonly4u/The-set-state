@@ -7,6 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import aarav from '../screens/aarav';
+import NewsScreen from '../screens/News';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -17,14 +18,28 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={'gift'}
     />
   ),
 };
+
+
+const NewsStack = createStackNavigator({
+  News: NewsScreen,
+});
+
+NewsStack.navigationOptions = {
+  tabBarLabel: 'News',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={'at-sign'}
+    />
+  ),
+};
+
+
+
 
 const LinksStack = createStackNavigator({
   Links: LinksScreen,
@@ -55,6 +70,7 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
+  NewsStack,
   HomeStack,
   // LinksStack,
   // SettingsStack,

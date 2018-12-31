@@ -9,6 +9,7 @@ import {  Header, List, ListItem, Left, Right, Thumbnail,Container, Spinner, But
 import Icon  from 'react-native-vector-icons/MaterialCommunityIcons';
 
 let log = "";
+let cout = 0 ;
 export default class HomeScreen extends Component {
   constructor(props){
     super(props);
@@ -29,17 +30,21 @@ export default class HomeScreen extends Component {
   componentDidMount() {
     setTimeout(() => {this.setState({renderCoponentFlag: true})}, 0);
   }
+  
+
   doThis = (countPerson) =>{
-      
+    
     // var loginLink = "https://www.dreamindiadream.com/AndroidApp_Handler/Account-login.ashx";
     // var loginDataCuteiii = "txtPasswordSU=tubelight143&txtUserID=D27088&";
     // var loginDataMe = "txtPasswordSU=myangel143&txtUserID=D48293&";
     // var loginDataMom = "txtPasswordSU=Rag1234&txtUserID=D58951&";
     var submitAdd = "https://www.dreamindiadream.com/AndroidApp_Handler/Save-Promotional-Task.ashx?Account-ID=";
     var submitID = [
-        "RDI3MDg4",//me
+        
         "RDQ4Mjkz",//ritika
-        "RDU4OTUx"];//mom
+        "RDU4OTUx",//mom
+        "RDI3MDg4",//me
+      ];
     var addClickedID = [
       {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzcyMTczNDM3MjQ= &",addNO:"1"},
       {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzU1NDkwMzg4MzY= &",addNO:"2"},
@@ -51,6 +56,17 @@ export default class HomeScreen extends Component {
       {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzU0MTExMjIyNDM= &",addNO:"8"},
       {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzYyNjMzNTQ3MDg= &",addNO:"9"},
       {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzM4NTA2Mjg1NjI= &",addNO:"10"},
+
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzI1OTg2MDg2ODI= &",addNO:"11"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2Lzk1Nzg5NTAwMDY= &",addNO:"12"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM5NjQ2MDMxOTY= &",addNO:"13"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzYyMzU1NDMzMTc= &",addNO:"14"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzU4NTYyNjkzNjE= &",addNO:"15"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM4MzE3OTkzMDI= &",addNO:"16"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzY4ODAwODU3MzQ= &",addNO:"17"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzE2NTU2NzkyMTU= &",addNO:"18"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzUzNjUzMTQ3NzU= &",addNO:"19"},
+      {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzEyNTg5NTI0MTg= &",addNO:"20"},
     ];
     var This = this;
     var i = 0 ;
@@ -62,11 +78,13 @@ export default class HomeScreen extends Component {
           //console.log("executing 30/"+i);
           var sentCount = This.state.sentCount+1;
           var receiveCount = This.state.receiveCount+1;
-          var text = This.state.textAreaText +"executing 30/"+i+"\n";
+          var text = This.state.textAreaText +"executing 120/"+i+"\n";
           log += text;
-          ////console.log("id:"+userID+"---"+addID.addID+" ("+addID.addNO+") "+"-->executing 30/"+i);
+          console.log("id:"+userID+"---"+addID.addID+" ("+addID.addNO+") "+"-->executing 60/"+i);
           //now sending request 
-
+          cout++;
+          console.log("pure count:"+cout);
+          // console.log()
           var data = addID.addID;
           var xhr = new XMLHttpRequest();
           xhr.withCredentials = true;
@@ -79,13 +97,13 @@ export default class HomeScreen extends Component {
               })
               log += this.responseText+"\n";
               if(
-                  this.responseText == '{"Success":false,"Message":"already clicked","detail":"10","aid":null}' ||
+                  this.responseText == '{"Success":false,"Message":"already clicked","detail":"20","aid":null}' ||
                   this.responseText.includes("true")
               ){
-                //console.log("Receving 30/"+(j+1));
+                console.log("Receving 60/"+(j+1));
                 j+=1;
-                //console.log(this.responseText);
-                if(j==10){
+                console.log(this.responseText);
+                if(j==20){
                   
                   if(countPerson+1 == 1){
                     This.setState({
@@ -105,7 +123,7 @@ export default class HomeScreen extends Component {
                   //console.log("Person done "+(countPerson+1));
                   //console.log(countPerson<3);
                   This.setState({
-                    receiveCount:This.state.receiveCount+10,
+                    receiveCount:This.state.receiveCount+20,
                   });
                   //now call request for 2nd person
                   if(countPerson<2)
@@ -119,7 +137,7 @@ export default class HomeScreen extends Component {
           
           xhr.open("POST", "https://www.dreamindiadream.com/AndroidApp_Handler/Save-Promotional-Task.ashx?Account-ID="+userID);
           xhr.onerror = function () {
-            //console.log("** An error occurred during the transaction");
+            console.log("** An error occurred during the transaction");
             if(countPerson+1 == 1){
               This.setState({
                 done1:"2",
@@ -145,7 +163,7 @@ export default class HomeScreen extends Component {
         });  
     //});
     This.setState({
-      sentCount:This.state.sentCount+10,
+      sentCount:This.state.sentCount+20,
     })
 
   }
@@ -222,7 +240,6 @@ export default class HomeScreen extends Component {
                        }); 
                        if(this.state.showTheThing){
                          this.setState({
-                          renderCoponentFlag: false,
                           done1:"3",
                           done2:"3",
                           done3:"3",
@@ -246,12 +263,12 @@ export default class HomeScreen extends Component {
                     <ProgressBarAndroid
                       styleAttr="Horizontal"
                       indeterminate={false}
-                      progress={(this.state.sentCount+this.state.receiveCount)/60}
+                      progress={(this.state.sentCount+this.state.receiveCount)/120}
                       color="#2196F3"
                     />
                     <View style={{flexDirection:"row",alignContent:"space-between"}}>
-                        <Text style={{flex:1}}>{this.state.sentCount+this.state.receiveCount}/60</Text>
-                        <Text style={{flex:1}}>{parseInt((this.state.sentCount+this.state.receiveCount)/60)*100} %</Text>
+                        <Text style={{flex:1}}>{this.state.sentCount+this.state.receiveCount}/120</Text>
+                        <Text style={{flex:1}}>{parseInt((this.state.sentCount+this.state.receiveCount)/120)*100} %</Text>
                         <Text style={{flex:1}}>{this.state.sentCount}</Text>
                         <Text style={{flex:1}}>{this.state.receiveCount}</Text>
                         <Text style={{flex:1}}>{this.state.ipDataReci}/{this.state.ipDataSend}</Text>
