@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "SetStateTest",
+    "description": "A very interesting project.",
+    "slug": "setstatetest",
+    "privacy": "public",
+    "sdkVersion": "30.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nocompany.DID"
+    },
+    "android": {
+      "package": "com.nocompany.DID"
+    }
+  }
+}
