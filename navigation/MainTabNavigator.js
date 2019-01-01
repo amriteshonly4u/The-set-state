@@ -8,13 +8,14 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import aarav from '../screens/aarav';
 import NewsScreen from '../screens/News';
+import RealHome from '../screens/RealHome';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: RealHome,
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: "Mela Bachha ko Gift Chiyea",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -70,7 +71,7 @@ SettingsStack.navigationOptions = {
 };
 
 export default createBottomTabNavigator({
-  NewsStack,
+  // NewsStack,
   HomeStack,
   // LinksStack,
   // SettingsStack,
