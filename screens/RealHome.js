@@ -43,16 +43,16 @@ export default class RealHome extends Component {
           {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzYyNjMzNTQ3MDg= &",addNO:"9"},
           {addID:"AdsId=Y2EtYXBwLXB1Yi0zOTk1OTYwNjc0NzEwOTkyLzM4NTA2Mjg1NjI= &",addNO:"10"},
     
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzI1OTg2MDg2ODI= &",addNO:"11"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2Lzk1Nzg5NTAwMDY= &",addNO:"12"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM5NjQ2MDMxOTY= &",addNO:"13"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzYyMzU1NDMzMTc= &",addNO:"14"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzU4NTYyNjkzNjE= &",addNO:"15"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM4MzE3OTkzMDI= &",addNO:"16"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzY4ODAwODU3MzQ= &",addNO:"17"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzE2NTU2NzkyMTU= &",addNO:"18"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzUzNjUzMTQ3NzU= &",addNO:"19"},
-          {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzEyNTg5NTI0MTg= &",addNO:"20"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzI1OTg2MDg2ODI= &",addNO:"11"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2Lzk1Nzg5NTAwMDY= &",addNO:"12"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM5NjQ2MDMxOTY= &",addNO:"13"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzYyMzU1NDMzMTc= &",addNO:"14"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzU4NTYyNjkzNjE= &",addNO:"15"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzM4MzE3OTkzMDI= &",addNO:"16"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzY4ODAwODU3MzQ= &",addNO:"17"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzE2NTU2NzkyMTU= &",addNO:"18"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzUzNjUzMTQ3NzU= &",addNO:"19"},
+        //   {addID:"AdsId=Y2EtYXBwLXB1Yi01OTc4NTg5ODg2NTI3NjU2LzEyNTg5NTI0MTg= &",addNO:"20"},
         ];
         for(var i = 0 ; i<2 ; i ++){
             submitID.forEach(function(userID){
